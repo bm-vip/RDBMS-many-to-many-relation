@@ -1,0 +1,4 @@
+id,created_by,created_date,modified_by,modified_date,version,first_name,last_name,email,birth_date,deleted
+1,anonymousUser,2022-08-16 02:10:48.777000,anonymousUser,2022-08-16 02:10:48.777000,0,Player A,A,a@a.a,2022-08-16,false
+2,anonymousUser,2022-08-16 02:11:07.551000,anonymousUser,2022-08-16 02:11:07.551000,0,Player B,B,b@b.b,2022-08-16,false
+3,anonymousUser,2022-08-16 02:10:48.777000,anonymousUser,2022-08-16 02:10:48.777000,0,Player C,C,c@c.c,2022-08-16,false

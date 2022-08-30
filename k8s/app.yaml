@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: game-love-service
+  name: game-love-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: game-love-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: game-love-service
+    spec:
+      containers:
+        - image: game-love-service-image
+          name: game-love-service-image
+          resources: {}
+          imagePullPolicy: IfNotPresent
+          env:
+          - name: DB_URL
+            value: jdbc:postgresql://postgres-db/game_lover
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: db-credentials
+                key: username
+          - name: DB_PASS
+            valueFrom:
+              secretKeyRef:
+                name: db-credentials
+                key: password
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: game-love-service
+  name: game-love-service
+spec:
+  ports:
+    - name: 2022-2022
+      port: 2022
+      protocol: TCP
+      targetPort: 2022
+  selector:
+    app: game-love-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}

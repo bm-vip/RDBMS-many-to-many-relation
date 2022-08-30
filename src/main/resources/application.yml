@@ -1,0 +1,38 @@
+server:
+  port: 2022
+  error:
+    include-message: always
+    include-binding-errors: always
+# Spring Boot configuration
+spring:
+  application:
+    name: game-love-service
+    version: @project.version@
+  liquibase.change-log: "classpath:/db/changelog/master.xml"
+  messages:
+    basename: i18n.messages
+    encoding: UTF-8
+  # Database
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: ${DB_URL:jdbc:h2:file:./h2db/game-lover}
+    username: ${DB_USER:sa}
+    password: ${DB_PASS:}
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    database: H2
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+    generate-ddl: true
+#    properties:
+#      org:
+#        hibernate:
+#          envers:
+#            store_data_at_delete: true
+#  sql:
+#    init:
+#      mode: always
+#      schema-locations: classpath:db/schema.sql
