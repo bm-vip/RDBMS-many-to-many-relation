@@ -26,16 +26,3 @@ Your submission should contain a Java service based Maven project solution. Avoi
 In this case, we recommend you to make use of spring boot as a starting point for your application. 
 
 In addition, in order for us to test your solution; make use of an embedded database like H2 or Sqlite, using a local file database scheme with your working solution.
-
-We look forward to your solution and appreciate your time applying with us!
-
-## More info
-
-We encourage you to use [Spring Boot](https://spring.io/projects/spring-boot) in this test.
-
-## Found a bug?
-
-Pull requests welcome, and maybe [we have a job for you](http://jobs.comeon.com/)? :)
-
-## How to Submit the Home Assignment
-Please, send us your code in a compressed file in an email with the code project.
